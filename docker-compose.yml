@@ -1,0 +1,28 @@
+services:
+
+  hotels:
+    image: kevinescobardev710/hotels:latest
+    mem_limit: 800m
+    ports:
+      - "8080:8080"
+    networks:
+      - kevin-network
+    
+  rooms:
+    image: kevinescobardev710/rooms:latest
+    mem_limit: 800m
+    ports:
+      - "8081:8081"
+    networks:
+      - kevin-network
+    
+  reservations:
+    image: kevinescobardev710/reservations:latest
+    mem_limit: 800m
+    ports:
+      - "8082:8082"
+    networks:
+      - kevin-network
+    
+networks:
+  kevin-network:
